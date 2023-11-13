@@ -3,7 +3,7 @@ module bcdto7segment (
   output logic [6:0] data_out
 );
 
-always @(*) begin
+always_comb begin
   case (data_in)
     4'b0000: data_out = 7'b1000000;
     4'b0001: data_out = 7'b1111001;
