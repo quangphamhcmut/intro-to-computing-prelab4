@@ -1,0 +1,35 @@
+|wrapper
+KEY[0] => ~NO_FANOUT~
+KEY[1] => ~NO_FANOUT~
+KEY[2] => rst[0].IN1
+KEY[3] => clk[0].IN1
+SW[0] => SW[0].IN1
+LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] <= design5:dut.Y
+LEDG[1] <= design5:dut.Y
+LEDG[2] <= <GND>
+LEDG[3] <= <GND>
+LEDG[4] <= <GND>
+LEDG[5] <= rst[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDG[6] <= <GND>
+LEDG[7] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wrapper|design5:dut
+clk => state~1.DATAIN
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+X[0] => next_state.S1.DATAB
+X[0] => Selector0.IN3
+X[0] => Selector1.IN3
+X[0] => Selector2.IN3
+X[0] => Selector0.IN1
+X[0] => Selector0.IN2
+X[0] => Selector1.IN1
+X[0] => Selector2.IN1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

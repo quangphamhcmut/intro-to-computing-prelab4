@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at counter.sv(13): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at design4.sv(29): always construct contains both blocking and non-blocking assignments
